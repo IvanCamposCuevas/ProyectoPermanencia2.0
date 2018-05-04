@@ -53,7 +53,7 @@
         </div>
         <br />
         <br />
-        <asp:Button ID="btoFiltroAd" runat="server" OnClick="btoFiltrar_Click" Text="Filtrar" />
+        <asp:Button ID="btoFiltroAd" runat="server" OnClick="btoFiltroAd_Click" Text="Filtrar" />
 
         <br />
         <hr />

@@ -42,7 +42,7 @@ namespace ProyectoPermanencia.Negocio
                 //Aplicar Filtros
                 if (!String.IsNullOrEmpty(rut))
                     auxSQL = auxSQL + " AND AL.Desc_Rut_Alumno = '" + rut + "';";
-                else if (!String.IsNullOrEmpty(jornada))
+                if (!String.IsNullOrEmpty(jornada))
                     auxSQL = auxSQL + " AND AL.Id.Jornada = '" + jornada + "';";
 
 

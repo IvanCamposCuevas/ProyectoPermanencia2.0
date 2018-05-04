@@ -41,11 +41,7 @@ namespace ProyectoPermanencia.Presentacion
             //grvGlobal.DataBind();
         }
 
-        protected void btoFiltrar_Click(object sender, EventArgs e)
-        {
-           
-        }
-
+        
         protected void grvGlobal_SelectedIndexChanged(object sender, EventArgs e)
         {
             GridViewRow row = this.grvGlobal.SelectedRow;
@@ -67,6 +63,18 @@ namespace ProyectoPermanencia.Presentacion
         protected void ddlJornada_SelectedIndexChanged(object sender, EventArgs e)
         {
             ddlJornada.SelectedValue.ToString();
+        }
+
+        protected void btoFiltroAd_Click(object sender, EventArgs e)
+        {
+            ProyectoPermanencia.Negocio.Negocio auxNegocio = new ProyectoPermanencia.Negocio.Negocio();
+
+            if (this.ddlJornada.SelectedValue.Equals("Seleccionar"))
+                this.grvGlobal.DataSource = auxNegocio.consultaScore(this.txtRut.Text, null);
+            else
+                this.grvGlobal.DataSource = auxNegocio.consultaScore(this.txtRut.Text, this.ddlJornada.SelectedValue);
+            this.grvGlobal.DataBind();
+
         }
     }
 }
