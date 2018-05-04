@@ -23,13 +23,15 @@
         <!-- Filtrar por jornada -->
         <div ID="Jornada" style="width:200px;">
             <h4>Jornada: </h4>
-            <asp:DropDownList ID="ddlJornada" runat="server" Width="120px">
+            <asp:DropDownList ID="ddlJornada" runat="server" Width="120px" OnSelectedIndexChanged="ddlJornada_SelectedIndexChanged">
                 <asp:ListItem Value="1" Text="Diurno">Diurno</asp:ListItem>
                 <asp:ListItem Value="2" Text="Vespertino">Vespertino</asp:ListItem>
             </asp:DropDownList>
             <br />
         </div>
         <!-- Filtrar por escuela -->
+        
+        
         <div id="Escuela" style="width:200px; align-self:center;">
             <h4>Escuela: </h4>
             <asp:DropDownList ID="ddlEscuelas" runat="server" >
@@ -56,7 +58,7 @@
         <br />
         <hr />
     </div>
-
+    
     <!-- GRILLA PRINCIPAL -->
     <div>
         <div id="ScoreGlobal" class="ScoreGlobal">

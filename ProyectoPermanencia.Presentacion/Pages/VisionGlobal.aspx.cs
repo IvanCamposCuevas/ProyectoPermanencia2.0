@@ -60,8 +60,13 @@ namespace ProyectoPermanencia.Presentacion
             ProyectoPermanencia.Negocio.Negocio auxNegocio = new ProyectoPermanencia.Negocio.Negocio();
 
             //this.GridViewScore.DataMember =
-            this.grvGlobal.DataSource = auxNegocio.consultaScore(this.txtRut.Text);
+            this.grvGlobal.DataSource = auxNegocio.consultaScore(this.txtRut.Text, this.ddlJornada.ToString());
             this.grvGlobal.DataBind();
+        }
+
+        protected void ddlJornada_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ddlJornada.SelectedValue.ToString();
         }
     }
 }
